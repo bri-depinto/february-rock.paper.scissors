@@ -21,5 +21,6 @@
     background-color: #E0E0E0 ;
 }
 .topscore{
-        font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka", sans-serif;
+   white-space: pre-wrap;
 }
