@@ -27,9 +27,21 @@
 }
 .choice{
     width: 15vw;
+ 
 }
 .choicebut{
     margin:18px;
+    background-color: #E0E0E0 ;
+    box-shadow: 0 8px 4px 0 #585757, 0 12px 40px 0 #515353;
+    border-radius: 100px;
+    transition: 0.5s;
+    border-color: #E0E0E0;
+    border-style: double;
+}
+button:hover{
+    box-shadow: 0 8px 4px 0 #B2DFDB, 0 12px 40px 0 #B2DFDB;
+  transition: 0.5s;
+  border-color: #000000;
 }
 .versus{
     font-family: "Fredoka", sans-serif;
