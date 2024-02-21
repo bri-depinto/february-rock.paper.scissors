@@ -44,3 +44,21 @@
 .questionn{
     width: 25vw;
 }
+footer{
+    background-color: #B2DFDB;
+    color: #fff;
+    padding: 10px;
+    margin-top: 75px;
+    text-align: center;
+  }
+  .plswork{
+    font-family: 'Homemade Apple', cursive;
+  }
+  p{
+    font-family: 'Englebert', cursive;
+    margin: 0;
+  }
+  a{
+    color: #bbbaba;
+    font-family: 'Englebert', cursive;
+  }
