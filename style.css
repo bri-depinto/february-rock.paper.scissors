@@ -42,6 +42,11 @@ button:hover{
   transition: 0.5s;
   border-color: #000000;
 }
+button:active{
+  box-shadow: 0 8px 4px 0 #B2DFDB, 0 12px 40px 0 #B2DFDB;
+transition: 0.5s;
+border-color: #000000;
+}
 .versus{
     font-family: "Fredoka", sans-serif;
     font-size: 10vw;
@@ -53,7 +58,8 @@ button:hover{
    top:90px;
 }
 .questionn{
-    width: 28vw;
+    width: 23vw;
+    margin-top:100px;
     margin-bottom:150px;
 }
 footer{
@@ -71,4 +77,20 @@ footer{
   a{
     color: #bbbaba;
     font-family: 'Englebert', cursive;
+  }
+  .reset{ 
+    border-radius: 50px;
+    font-family: 'Englebert', cursive;
+    width: 20vw;
+    font-size: 25px;
+    padding: 10px;
+  }
+  .roundd{
+    font-family: 'Englebert', cursive;
+    text-decoration: underline;
+    font-size: 9vw;
+  }
+  .winn{
+    font-family: 'Englebert', cursive;
+
   }

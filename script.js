@@ -1,5 +1,6 @@
-let userName =prompt('Enter your name')
-let names='${userName} score'
-let userNameOutputDiv = document.getElementbyId('userNameOutput')
-console.log(names)
-userNameOutputDiv.innerHTML=`<h1>${names}</h1>`
+let playerName = prompt('Enter Name of User')
+
+if(playerName === null){
+    prompt('Please enter a valid name')
+}
+document.getElementById('userName').innerText = `${playerName}'s`
