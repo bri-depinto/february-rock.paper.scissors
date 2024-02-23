@@ -38,15 +38,16 @@
     border-style: double;
     
 }
-button:hover{
+.choicebut:hover{
     box-shadow: 0 8px 4px 0 #B2DFDB, 0 12px 40px 0 #B2DFDB;
   transition: 0.5s;
   border-color: #000000;
 }
-button:active{
+.choicebut:focus{
   box-shadow: 0 8px 4px 0 #B2DFDB, 0 12px 40px 0 #B2DFDB;
 transition: 0.5s;
 border-color: #000000;
+border-width: 10px;
 }
 .versus{
     font-family: "Fredoka", sans-serif;
@@ -85,7 +86,13 @@ footer{
     width: 20vw;
     font-size: 25px;
     padding: 10px;
+    transition: 0.5s;
   }
+  .reset:hover{
+    box-shadow: 0 8px 4px 0 #B2DFDB, 0 12px 40px 0 #B2DFDB;
+  transition: 0.5s;
+  border-color: #000000;
+}
   .roundd{
     font-family: 'Englebert', cursive;
     text-decoration: underline;
