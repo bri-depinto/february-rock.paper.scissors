@@ -36,6 +36,7 @@
     transition: 0.5s;
     border-color: #E0E0E0;
     border-style: double;
+    
 }
 button:hover{
     box-shadow: 0 8px 4px 0 #B2DFDB, 0 12px 40px 0 #B2DFDB;
@@ -59,7 +60,7 @@ border-color: #000000;
 }
 .questionn{
     width: 23vw;
-    margin-top:100px;
+    margin-top:40px;
     margin-bottom:150px;
 }
 footer{

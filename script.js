@@ -1,6 +1,6 @@
-let playerName = prompt('Enter Name of User')
+let playerName = prompt('Enter your username:')
 
-if(playerName === null){
-    prompt('Please enter a valid name')
-}
+while (playerName === null || playerName === '')[
+    playerName = prompt('Please enter valid username:')
+]
 document.getElementById('userName').innerText = `${playerName}'s`
