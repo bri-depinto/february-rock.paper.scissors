@@ -27,17 +27,23 @@ function playGame(playerChoice) {
 
     if (playerChoice === computerChoice) {
         result = "It's a tie!";
+        roundNum++;
     } else if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
                (playerChoice === 'paper' && computerChoice === 'rock') ||
                (playerChoice === 'scissors' && computerChoice === 'paper')) {
         result = "You win!";
+        playerScore++;
+        roundNum++;
     } else {
         result = "Computer wins!";
+        computerScore++;
+        roundNum++;
     }
 
 
     document.getElementById('result').innerText = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
-
+    document.getElementById('computerScore').innerText = `${computerScore}`;
+    document.getElementById('playerScore').innerText = `${playerScore}`;
 }
 
 function resetGame() {
