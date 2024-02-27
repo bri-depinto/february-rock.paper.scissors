@@ -44,6 +44,7 @@ function playGame(playerChoice) {
     document.getElementById('result').innerText = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
     document.getElementById('computerScore').innerText = `${computerScore}`;
     document.getElementById('playerScore').innerText = `${playerScore}`;
+    document.getElementById('roundNum').innerText = `${roundNum}`;
 }
 
 function resetGame() {
