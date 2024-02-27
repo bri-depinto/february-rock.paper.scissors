@@ -69,5 +69,11 @@ function resetGame() {
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
     document.getElementById('roundNum').innerText = '1';
+    const rButton = document.getElementById("rockButton");
+    rButton.disabled = false;
+    const pButton = document.getElementById("paperButton");
+    pButton.disabled = false;
+    const sButton = document.getElementById("scissorButton");
+    sButton.disabled = false;
 }
 //resetting the score, round, and displays
