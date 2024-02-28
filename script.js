@@ -48,6 +48,7 @@ function playGame(playerChoice) {
             document.getElementById('changeImage').classList.toggle('d-none')
             document.getElementById('versusThing').classList.toggle('d-none')
             document.getElementById('tryMe').innerText = 'Game over!'
+            document.getElementById('result').innerText = 'please work'
         }
       
     }
