@@ -47,6 +47,7 @@ function playGame(playerChoice) {
             document.getElementById('scissorButton').classList.toggle('d-none')
             document.getElementById('changeImage').classList.toggle('d-none')
             document.getElementById('versusThing').classList.toggle('d-none')
+            document.getElementById('tryMe').innerText = 'Game over!'
         }
       
     }
