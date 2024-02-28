@@ -69,6 +69,7 @@ function resetGame() {
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
     document.getElementById('roundNum').innerText = '1';
+    document.getElementById('tryMe').innertext = 'Round 1:'
     document.getElementById('rockButton').classList.remove('d-none')
     document.getElementById('paperButton').classList.remove('d-none')
     document.getElementById('scissorButton').classList.remove('d-none')
