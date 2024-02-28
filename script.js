@@ -42,12 +42,12 @@ function playGame(playerChoice) {
         roundNum++;
 
         if (roundNum===6){
-         const rButton = document.getElementById("rockButton");
-         rButton.disabled = true;
-         const pButton = document.getElementById("paperButton");
-         pButton.disabled = true;
-         const sButton = document.getElementById("scissorButton");
-         sButton.disabled = true;
+            document.getElementById('rockButton').classList.toggle('d-none')
+            document.getElementById('paperButton').classList.toggle('d-none')
+            document.getElementById('scissorButton').classList.toggle('d-none')
+            document.getElementById('changeImage').classList.toggle('d-none')
+            document.getElementById('versusThing').classList.toggle('d-none')
+
         }
       
     }
@@ -69,11 +69,11 @@ function resetGame() {
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
     document.getElementById('roundNum').innerText = '1';
-    const rButton = document.getElementById("rockButton");
-    rButton.disabled = false;
-    const pButton = document.getElementById("paperButton");
-    pButton.disabled = false;
-    const sButton = document.getElementById("scissorButton");
-    sButton.disabled = false;
+    document.getElementById('rockButton').classList.remove('d-none')
+    document.getElementById('paperButton').classList.remove('d-none')
+    document.getElementById('scissorButton').classList.remove('d-none')
+    document.getElementById('changeImage').classList.remove('d-none')
+    document.getElementById('versusThing').classList.remove('d-none')
+
 }
 //resetting the score, round, and displays
