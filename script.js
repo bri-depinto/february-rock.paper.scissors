@@ -14,6 +14,27 @@ function playGame(playerChoice) {
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
+   
+    if (roundNum >= 5){
+        document.getElementById('rockButton').classList.toggle('d-none');
+        document.getElementById('paperButton').classList.toggle('d-none');
+        document.getElementById('scissorButton').classList.toggle('d-none');
+        document.getElementById('changeImage').classList.toggle('d-none');
+        document.getElementById('versusThing').classList.toggle('d-none');
+        document.getElementById('tryMe').innerText = 'Game over!';
+        let overallWinner;
+        if (playerScore > computerScore) {
+            overallWinner = `${playerName} wins the game!`;
+        } else if (playerScore < computerScore) {
+            overallWinner = "Computer wins the game!";
+        } else {
+            overallWinner = "It's a tie!";
+        }
+        document.getElementById('result').innerText = `Final Score: Player ${playerScore}, Computer ${computerScore}. ${overallWinner}`;
+        return;
+    } 
+   
+   
     if(computerChoice === 'rock'){
         document.getElementById('changeImage').src = 'images/rock.png'
     }
@@ -41,15 +62,6 @@ function playGame(playerChoice) {
         computerScore++;
         roundNum++;
 
-        if (roundNum===6){
-            document.getElementById('rockButton').classList.toggle('d-none')
-            document.getElementById('paperButton').classList.toggle('d-none')
-            document.getElementById('scissorButton').classList.toggle('d-none')
-            document.getElementById('changeImage').classList.toggle('d-none')
-            document.getElementById('versusThing').classList.toggle('d-none')
-            document.getElementById('tryMe').innerText = 'Game over!'
-            document.getElementById('result').innerText = 'please work'
-        }
       
     }
     //updating round numbes and scores based on winner loser or tie
