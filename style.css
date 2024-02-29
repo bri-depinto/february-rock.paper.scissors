@@ -1,3 +1,7 @@
+body{
+  min-height: 100vh;
+}
+
 .navbar{
     background-color: #B2DFDB;
 }
@@ -68,6 +72,8 @@ footer{
     background-color: #B2DFDB;
     color: #fff;
     text-align: center;
+    bottom: 0;
+    width: 100%;
   }
   .plswork{
     font-family: 'Homemade Apple', cursive;

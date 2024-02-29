@@ -86,8 +86,8 @@ function resetGame() {
     document.getElementById('result').innerText = 'Who will win?';
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
-    document.getElementById('roundNum').innerText = '1';
-    document.getElementById('tryMe').innertext = 'Round 1:';
+    document.getElementById('tryMe').innerText = 'Round :';
+    document.getElementById('roundNum').innerText = '1'
 
 
 }
