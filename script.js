@@ -30,7 +30,7 @@ function playGame(playerChoice) {
         } else {
             overallWinner = "It's a tie!";
         }
-        document.getElementById('result').innerText = `Final Score: Player ${playerScore}, Computer ${computerScore}. ${overallWinner}`;
+        document.getElementById('result').innerText = `Final Score: ${playerName} ${playerScore}, Computer ${computerScore}. ${overallWinner}`;
         return;
     } 
    
@@ -77,17 +77,18 @@ function resetGame() {
     playerScore = 0;
     computerScore = 0;
     roundNum = 1;
+    document.getElementById('rockButton').classList.toggle('d-none')
+    document.getElementById('paperButton').classList.toggle('d-none')
+    document.getElementById('scissorButton').classList.toggle('d-none')
+    document.getElementById('changeImage').classList.toggle('d-none')
+    document.getElementById('versusThing').classList.toggle('d-none')
     document.getElementById('changeImage').src = 'images/question.png';
     document.getElementById('result').innerText = 'Who will win?';
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
     document.getElementById('roundNum').innerText = '1';
-    document.getElementById('tryMe').innertext = 'Round 1:'
-    document.getElementById('rockButton').classList.remove('d-none')
-    document.getElementById('paperButton').classList.remove('d-none')
-    document.getElementById('scissorButton').classList.remove('d-none')
-    document.getElementById('changeImage').classList.remove('d-none')
-    document.getElementById('versusThing').classList.remove('d-none')
+    document.getElementById('tryMe').innertext = 'Round 1:';
+
 
 }
 //resetting the score, round, and displays
