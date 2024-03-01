@@ -25,7 +25,7 @@ function playGame(playerChoice) {
         let overallWinner;
         if (playerScore > computerScore) {
             overallWinner = `${playerName} wins the game!`;
-            var duration = 3 * 1000;
+            var duration = 5 * 1000;
             var animationEnd = Date.now() + duration;
             var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
