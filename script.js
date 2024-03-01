@@ -1,21 +1,21 @@
 let playerName = prompt('Enter your username:')
 
-while (playerName === null || playerName === '')[
+while (playerName === null || playerName === '') [
     playerName = prompt('Please enter valid username:')
 ]
 document.getElementById('userName').innerText = `${playerName}'s`
 //getting the username and storing it
 
-let playerScore=0
-let computerScore=0
-let roundNum=1
+let playerScore = 0
+let computerScore = 0
+let roundNum = 1
 
 function playGame(playerChoice) {
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
-   
-    if (roundNum >= 5){
+
+    if (roundNum >= 5) {
         document.getElementById('rockButton').classList.toggle('d-none');
         document.getElementById('paperButton').classList.toggle('d-none');
         document.getElementById('scissorButton').classList.toggle('d-none');
@@ -25,6 +25,26 @@ function playGame(playerChoice) {
         let overallWinner;
         if (playerScore > computerScore) {
             overallWinner = `${playerName} wins the game!`;
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function () {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+                // since particles fall down, start a bit higher than random
+                confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+                confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+            }, 250);
         } else if (playerScore < computerScore) {
             overallWinner = "Computer wins the game!";
         } else {
@@ -32,16 +52,16 @@ function playGame(playerChoice) {
         }
         document.getElementById('result').innerText = `Final Score: ${playerName} ${playerScore}, Computer ${computerScore}. ${overallWinner}`;
         return;
-    } 
-   
-   
-    if(computerChoice === 'rock'){
+    }
+
+
+    if (computerChoice === 'rock') {
         document.getElementById('changeImage').src = 'images/rock.png'
     }
-    if(computerChoice === 'paper'){
+    if (computerChoice === 'paper') {
         document.getElementById('changeImage').src = 'images/paper.png'
     }
-    if(computerChoice === 'scissors'){
+    if (computerChoice === 'scissors') {
         document.getElementById('changeImage').src = 'images/sciz.png'
     }
     //changing imahges based on what computer chose
@@ -52,8 +72,8 @@ function playGame(playerChoice) {
         result = "It's a tie!";
         roundNum++;
     } else if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
-               (playerChoice === 'paper' && computerChoice === 'rock') ||
-               (playerChoice === 'scissors' && computerChoice === 'paper')) {
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')) {
         result = "You win!";
         playerScore++;
         roundNum++;
@@ -62,7 +82,7 @@ function playGame(playerChoice) {
         computerScore++;
         roundNum++;
 
-      
+
     }
     //updating round numbes and scores based on winner loser or tie
 
@@ -86,7 +106,7 @@ function resetGame() {
     document.getElementById('result').innerText = 'Who will win?';
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
-    document.getElementById('tryMe').innerHTML =`Round <span id="roundNum">1</span>:`;
+    document.getElementById('tryMe').innerHTML = `Round <span id="roundNum">1</span>:`;
 
 
 }
