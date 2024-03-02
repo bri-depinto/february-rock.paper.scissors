@@ -24,7 +24,7 @@ function playGame(playerChoice) {
         document.getElementById('tryMe').innerText = 'Game over!';
         let overallWinner;
         if (playerScore > computerScore) {
-            overallWinner = `You win the game!`;
+            overallWinner = `Congratulations! You won the game!`;
             var duration = 5 * 1000;
             var animationEnd = Date.now() + duration;
             var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -46,9 +46,9 @@ function playGame(playerChoice) {
                 confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
             }, 250);
         } else if (playerScore < computerScore) {
-            overallWinner = "Computer wins the game!";
+            overallWinner = "Computer wins the game! Better luck next time!";
         } else {
-            overallWinner = "It's a tie!";
+            overallWinner = "It's a tie! Good game!";
         }
         document.getElementById('result').innerText = `Final Score: ${playerName} ${playerScore}, Computer ${computerScore}. ${overallWinner}`;
         return;
