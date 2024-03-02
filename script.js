@@ -24,7 +24,15 @@ function playGame(playerChoice) {
         document.getElementById('tryMe').innerText = 'Game over!';
         let overallWinner;
         if (playerScore > computerScore) {
-            overallWinner = `Congratulations! You won the game!`;
+            const congratsMessages = [
+                "Congratulations! You won the game!",
+                "Great job! You're the winner!",
+                "Congratulations on your victory!",
+            ];
+    
+            overallWinner = congratsMessages[Math.floor(Math.random() * congratsMessages.length)];
+
+
             var duration = 5 * 1000;
             var animationEnd = Date.now() + duration;
             var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -46,7 +54,14 @@ function playGame(playerChoice) {
                 confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
             }, 250);
         } else if (playerScore < computerScore) {
-            overallWinner = "Computer wins the game! Better luck next time!";
+            const consolationMessages = [
+                "Computer won the game! Better luck next time!",
+                "You lost! Keep trying!",
+                "You lost to a computer! Do better!",
+            ];
+    
+            overallWinner = consolationMessages[Math.floor(Math.random() * consolationMessages.length)];
+
         } else {
             overallWinner = "It's a tie! Good game!";
         }
