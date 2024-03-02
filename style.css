@@ -29,11 +29,11 @@ body{
    font-size: 4vw;
 }
 .choice{
-    width: 10vw;
+    width: 6vw;
  
 }
 .choicebut{
-    margin:18px;
+    margin:10px;
     background-color: #E0E0E0 ;
     box-shadow: 0 8px 4px 0 #585757, 0 12px 40px 0 #515353;
     border-radius: 100px;
@@ -55,7 +55,7 @@ border-width: 10px;
 }
 .versus{
     font-family: "Fredoka", sans-serif;
-    font-size: 10vw;
+    font-size: 8vw;
     position: relative;
     top: 90px;
 }
@@ -64,8 +64,8 @@ border-width: 10px;
    top:90px;
 }
 .questionn{
-    width: 23vw;
-    margin-top:40px;
+    width: 15vw;
+    margin-top:20px;
     margin-bottom:150px;
 }
 footer{
@@ -103,9 +103,9 @@ footer{
   .roundd{
     font-family: 'Englebert', cursive;
     text-decoration: underline;
-    font-size: 9vw;
+    font-size: 5vw;
   }
   .winn{
     font-family: 'Englebert', cursive;
-
+font-size: 3vw;
   }

@@ -24,7 +24,7 @@ function playGame(playerChoice) {
         document.getElementById('tryMe').innerText = 'Game over!';
         let overallWinner;
         if (playerScore > computerScore) {
-            overallWinner = `${playerName} wins the game!`;
+            overallWinner = `You win the game!`;
             var duration = 5 * 1000;
             var animationEnd = Date.now() + duration;
             var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -103,7 +103,7 @@ function resetGame() {
     document.getElementById('changeImage').classList.toggle('d-none')
     document.getElementById('versusThing').classList.toggle('d-none')
     document.getElementById('changeImage').src = 'images/question.png';
-    document.getElementById('result').innerText = 'Who will win?';
+    document.getElementById('result').innerText = 'Who will win? Best out of 5!';
     document.getElementById('playerScore').innerText = '0';
     document.getElementById('computerScore').innerText = '0';
     document.getElementById('tryMe').innerHTML = `Round <span id="roundNum">1</span>:`;
